@@ -104,7 +104,7 @@ var bindTaskEvents = function(taskListItem, checkBoxEventHandler) {
     deleteButton.onclick = deleteTask;
     checkBox.onchange = checkBoxEventHandler;
 
-    readItems();
+    readItems;
 }
 
 for (var i = 0; i < incompleteTaskHolder.children.length; i++) {
