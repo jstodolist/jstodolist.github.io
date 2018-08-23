@@ -1,3 +1,4 @@
+readItems();
 var taskInput = document.getElementById("new-task");
 var addButton = document.getElementsByTagName("button")[0];
 var incompleteTaskHolder = document.getElementById("incomplete-tasks");
@@ -103,8 +104,6 @@ var bindTaskEvents = function(taskListItem, checkBoxEventHandler) {
 
     deleteButton.onclick = deleteTask;
     checkBox.onchange = checkBoxEventHandler;
-
-    readItems;
 }
 
 for (var i = 0; i < incompleteTaskHolder.children.length; i++) {
