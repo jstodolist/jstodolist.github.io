@@ -73,8 +73,6 @@ var removeItem = function(task) {
 
     var local = JSON.parse(localStorage.getItem("local"));
 
-    local['tasks'].push(task);
-
     for (var i = local['tasks'].length - 1; i >= 0; i--) {
         if (local['tasks'][i] === task) {
             local['tasks'].splice(i, 1);
@@ -85,6 +83,18 @@ var removeItem = function(task) {
     console.log(local);
 }
 
+var readItems = function() {
+    if (!localStorage.getItem("local")) return;
+
+    var local = JSON.parse(localStorage.getItem("local"));
+
+    for (var i = local['tasks'].length - 1; i >= 0; i--) {
+        var listItem = createNewTaskElement(local['tasks'][i]);
+        incompleteTaskHolder.appendChild(listItem);
+        bindTaskEvents(listItem, taskCompleted);
+    }
+}
+
 addButton.addEventListener("click", addTask);
 
 var bindTaskEvents = function(taskListItem, checkBoxEventHandler) {
@@ -93,6 +103,8 @@ var bindTaskEvents = function(taskListItem, checkBoxEventHandler) {
 
     deleteButton.onclick = deleteTask;
     checkBox.onchange = checkBoxEventHandler;
+
+    readItems();
 }
 
 for (var i = 0; i < incompleteTaskHolder.children.length; i++) {
