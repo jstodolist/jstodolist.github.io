@@ -1,10 +1,11 @@
-document.getElementById('send-push').addEventListener("click", displayNotification());
-
 function displayNotification() {
     if (Notification.permission === "granted") {
         navigator.serviceWorker.getRegistration().then(function (reg) {
+            var pushTitle = document.getElementById('push-title').value || "Demo!";
+            var pushBody = document.getElementById('push-body').value || "corpo da notificação";
+
             var options = {
-                body: 'corpo da notificação',
+                body: pushBody,
                 icon: 'images/icons/icon-72x72.png',
                 vibrate: [100, 50, 100],
                 data: {
@@ -23,7 +24,7 @@ function displayNotification() {
                     },
                 ]
             };
-            reg.showNotification('Hello world!', options);
+            reg.showNotification(pushTitle, options);
         });
     } else if (Notification.permission === "blocked") {
         document.getElementById('message').textContent = "notificações estão bloqueadas. :(";
