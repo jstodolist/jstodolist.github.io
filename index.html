@@ -18,19 +18,21 @@
     <div class="section no-pad-bot" id="index-banner">
         <div class="container">
             <br><br>
-            <h1 class="header center blue-text">Push Notification Demo</h1>
+            <h3 class="header center blue-text">Push Notification Demo</h3>
             <div class="row center">
-                <h5 class="header col s12 light">enviar notificação por push </h5>
+                <form>
+                    <div class="input-field col s6">
+                        <input placeholder="Título" id="push-title" type="text">
+                        <label for="push-title">Título</label>
+                    </div>
+                    <div class="input-field col s6">
+                        <input placeholder="Conteúdo" id="push-body" type="text">
+                        <label for="push-body">Conteúdo</label>
+                    </div>
+                </form>
             </div>
             <div class="row center">
-                <div class="input-field col s6">
-                    <input placeholder="Título" id="push-title" type="text">
-                    <label for="push-title">Título</label>
-                </div>
-                <div class="input-field col s6">
-                    <input placeholder="Conteúdo" id="push-body" type="text">
-                    <label for="push-body">Conteúdo</label>
-                </div>
+                <h5 class="header col s12 light">enviar notificação por push </h5>
             </div>
             <div class="row center">
                 <h5 id="message" class="header col s12 light"> </h5>
