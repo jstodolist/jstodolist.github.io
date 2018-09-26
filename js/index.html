@@ -1,0 +1,32 @@
+<html>
+
+<head>
+    <title>TodoJS</title>
+    <link rel="stylesheet" href="style.css" type="text/css" media="screen">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="manifest" href="manifest.json" />
+</head>
+
+<body>
+    <div class="container">
+        <h3>ToDo JS - a simple todo list</h3>
+        <form>
+            <label for="new-task">NEW TASK</label>
+            <input id="new-task" type="text">
+            <button type="submit">Add</button>
+        </form>
+
+        <h3>TODO</h3>
+        <ul id="incomplete-tasks"></ul>
+
+        <h3>DONE</h3>
+        <ul id="completed-tasks"></ul>
+    </div>
+
+    <script type="text/javascript" src="app.js"></script>
+    <script src="sw.js"></script>
+
+</body>
+
+</html>

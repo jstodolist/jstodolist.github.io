@@ -1,32 +1,43 @@
+<!DOCTYPE html>
 <html>
 
 <head>
-    <title>TodoJS</title>
-    <link rel="stylesheet" href="style.css" type="text/css" media="screen">
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Push Notification Demo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="manifest" href="manifest.json" />
+    <!-- Compiled and minified Materialize CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
 </head>
 
 <body>
-    <div class="container">
-        <h3>ToDo JS - a simple todo list</h3>
-        <p>
-            <label for="new-task">NEW TASK</label>
-            <input id="new-task" type="text">
-            <button>Add</button>
-        </p>
 
-        <h3>TODO</h3>
-        <ul id="incomplete-tasks"></ul>
+    <div class="section no-pad-bot" id="index-banner">
+        <div class="container">
+            <br><br>
+            <h1 class="header center blue-text">Push Notification Demo</h1>
+            <div class="row center">
+                <h5 class="header col s12 light">enviar notificação por push </h5>
+            </div>
+            <div class="row center">
+                <h5 id="message" class="header col s12 light"> </h5>
+            </div>
+            <div class="row center">
+                <button id="send-push" class="btn-large waves-effect waves-light blue">enviar</button>
+            </div>
+            <br><br>
 
-        <h3>DONE</h3>
-        <ul id="completed-tasks"></ul>
+        </div>
     </div>
 
+    <!-- Compiled and minified Materialize JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <!-- Custom JS -->
     <script type="text/javascript" src="app.js"></script>
     <script src="sw.js"></script>
-
 </body>
 
 </html>
