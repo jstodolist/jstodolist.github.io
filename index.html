@@ -23,10 +23,20 @@
                 <h5 class="header col s12 light">enviar notificação por push </h5>
             </div>
             <div class="row center">
+                <div class="input-field col s6">
+                    <input placeholder="Título" id="push-title" type="text">
+                    <label for="push-title">Título</label>
+                </div>
+                <div class="input-field col s6">
+                    <input placeholder="Conteúdo" id="push-body" type="text">
+                    <label for="push-body">Conteúdo</label>
+                </div>
+            </div>
+            <div class="row center">
                 <h5 id="message" class="header col s12 light"> </h5>
             </div>
             <div class="row center">
-                <button id="send-push" class="btn-large waves-effect waves-light blue">enviar</button>
+                <button onclick="displayNotification()" id="send-push" class="btn-large waves-effect waves-light blue">enviar</button>
             </div>
             <br><br>
 
